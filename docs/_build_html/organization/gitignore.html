@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ignoring files with .gitignore &mdash; Fancy GitHub  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="README, your repo’s front page" href="../readme/index.html" />
+    <link rel="prev" title="Organizing your repositories" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> Fancy GitHub
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../welcome/index.html">Welcome!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html">Organizing your repositories</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Ignoring files with <code class="docutils literal notranslate"><span class="pre">.gitignore</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#what-is-a-gitignore-file">What is a <code class="docutils literal notranslate"><span class="pre">.gitignore</span></code> file?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#what-belongs-in-gitignore">What belongs in <code class="docutils literal notranslate"><span class="pre">.gitignore</span></code>?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#creating-a-gitignore">Creating a <code class="docutils literal notranslate"><span class="pre">.gitignore</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#help-it-s-already-in-the-repo">Help! It’s already in the repo!</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#note-errors-when-pushing-new-updates">Note: Errors when pushing new updates</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#files-we-shouldn-t-ignore">Files we shouldn’t ignore</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../readme/index.html">README, your repo’s front page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../extras/jupyter.html">Special considerations for Jupyter notebooks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../github-profile/index.html">Customizing your GitHub Profile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../github-pages/index.html">Creating and hosting web pages on GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../github-actions-dynamic-page/index.html">Auto-updating pages with GitHub Actions</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Fancy GitHub</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Ignoring files with <code class="docutils literal notranslate"><span class="pre">.gitignore</span></code></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/organization/gitignore.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section class="tex2jax_ignore mathjax_ignore" id="ignoring-files-with-gitignore">
+<h1>Ignoring files with <code class="docutils literal notranslate"><span class="pre">.gitignore</span></code><a class="headerlink" href="#ignoring-files-with-gitignore" title="Permalink to this headline"></a></h1>
+<section id="what-is-a-gitignore-file">
+<h2>What is a <code class="docutils literal notranslate"><span class="pre">.gitignore</span></code> file?<a class="headerlink" href="#what-is-a-gitignore-file" title="Permalink to this headline"></a></h2>
+<p>Sometimes either you or your computer create files you <strong>don’t want included in your repository.</strong> Temporary files, temporary notes, API keys, all sorts of things that belong on your machine but not up on GitHub.</p>
+<p>For keeping out clutter, your best friend is going to be what’s called a <code class="docutils literal notranslate"><span class="pre">.gitignore</span></code> file. It’s a file – yes, named <code class="docutils literal notranslate"><span class="pre">.gitignore</span></code> – that sits in your repo and tells git which files it shouldn’t try to add into the repository.</p>
+</section>
+<section id="what-belongs-in-gitignore">
+<h2>What belongs in <code class="docutils literal notranslate"><span class="pre">.gitignore</span></code>?<a class="headerlink" href="#what-belongs-in-gitignore" title="Permalink to this headline"></a></h2>
+<p>If you’re been blessed to not have an awful, cluttered GitHub repo, maybe you aren’t sure why we’d ignore files. Let’s start with an example!</p>
+<p>The poster child of GitHub clutter is an OS X file called <code class="docutils literal notranslate"><span class="pre">.DS_Store</span></code>. Macs have a nasty habit of adding it to every directory that you look at, despite the fact that <em>it doesn’t really do anything.</em> It just sits there looking ugly at the top of your repo, like this:</p>
+<p><img alt=".DS_Store in one of my repos" src="../_images/ds_store.png" /></p>
+<p>You can see <a class="reference external" href="https://github.com/search?q=remove+.DS_Store&amp;type=commits">over 500,000 examples of people removing <code class="docutils literal notranslate"><span class="pre">.DS_Store</span></code></a> with a simple GitHub search! Beyond <code class="docutils literal notranslate"><span class="pre">.DS_Store</span></code>, most of what you want to keep out is based on what kind of developer you are:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">.ipynb_checkpoints</span></code>, if you use Jupyter Notebooks</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">.vscode</span></code> if you use Visual Studio Code</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">node_modules</span></code>, if you’re a JS developer</p></li>
+</ul>
+<p>And many, many, <em>many</em> more.</p>
+</section>
+<section id="creating-a-gitignore">
+<h2>Creating a <code class="docutils literal notranslate"><span class="pre">.gitignore</span></code><a class="headerlink" href="#creating-a-gitignore" title="Permalink to this headline"></a></h2>
+<p>You can add files to ignore one-by-one, or you can just go find a list. I usually go to <span class="xref myst">gitignore.io</span> to type in a mishmash of buzzwords about what I program in:</p>
+<ul class="simple">
+<li><p>OSX</p></li>
+<li><p>VisualStudioCode</p></li>
+<li><p>Python</p></li>
+</ul>
+<p>And it gives me <a class="reference external" href="https://www.toptal.com/developers/gitignore/api/osx,visualstudiocode,python">a nice long <code class="docutils literal notranslate"><span class="pre">.gitignore</span></code></a> I can drop into my repo right from the start. If there are other files I need to add, I can add them on a case-by-case basis.</p>
+<p><em>If you’re using GitHub Desktop, you can go to the <strong>Repository &gt; Repository Settings &gt; Ignored Files</strong> field.</em></p>
+</section>
+<section id="help-it-s-already-in-the-repo">
+<h2>Help! It’s already in the repo!<a class="headerlink" href="#help-it-s-already-in-the-repo" title="Permalink to this headline"></a></h2>
+<p>If you have some files that are already in the repo that you’d like to ignore, just adding a <code class="docutils literal notranslate"><span class="pre">.gitignore</span></code> won’t help you. You also need to remove the file from the existing repository! It’s not too bad, though:</p>
+<p>First, update your <code class="docutils literal notranslate"><span class="pre">.gitignore</span></code> to include the file</p>
+<p>Then, we need to tell git to stop tracking the file:</p>
+<ul class="simple">
+<li><p>If you’re using the <strong>command-line version</strong> of git, you can tell git to stop tracking a file with <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">rm</span> <span class="pre">--cached</span> <span class="pre">filename</span></code>. Commit the change, push to GitHub, and you’re all set!</p></li>
+<li><p>If you’re using <strong>GitHub Desktop</strong>, the easiest way is to delete it from <em>the GitHub website</em>. It feels like cheating, but hey, it works! Click on the file or folder, then find the delete option. It will be in a slightly different location depending on whether it’s a single file or a directory:</p></li>
+</ul>
+<p><img alt="Deleting a file from the web interface" src="../_images/github_delete_file.png" /></p>
+<p><img alt="Deleting a folder from the web interface" src="../_images/github_delete_folder.png" /></p>
+<p>You can also do this if you’re using the command line.</p>
+<p>Refresh your repository, and bask in the joy of a nice clean page!</p>
+<section id="note-errors-when-pushing-new-updates">
+<h3>Note: Errors when pushing new updates<a class="headerlink" href="#note-errors-when-pushing-new-updates" title="Permalink to this headline"></a></h3>
+<p>If you did your deleting through the GitHub website, the next time you try to push up a new commit git will throw an error, then start yelling that you need to <strong>“pull changes from remote”</strong>. This just means take the updates from the web and save them to your computer’s version of the repository.</p>
+<p>On the command line this means typing <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">pull</span></code> (or whatever command the error tells you to run), and for GitHub Desktop you just click whatever blue button it guides you to about four or five times.</p>
+</section>
+</section>
+<section id="files-we-shouldn-t-ignore">
+<h2>Files we shouldn’t ignore<a class="headerlink" href="#files-we-shouldn-t-ignore" title="Permalink to this headline"></a></h2>
+<p>Now that we’ve covered files we want to get rid of, another important aspect is files we <em>do</em> want. Specifically, <code class="docutils literal notranslate"><span class="pre">README.md</span></code>, your repository’s introduction!</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Organizing your repositories" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../readme/index.html" class="btn btn-neutral float-right" title="README, your repo’s front page" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, Jonathan Soma.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-5541738-17"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-5541738-17', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>

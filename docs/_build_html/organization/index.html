@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Organizing your repositories &mdash; Fancy GitHub  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Ignoring files with .gitignore" href="gitignore.html" />
+    <link rel="prev" title="Welcome!" href="../welcome/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> Fancy GitHub
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../welcome/index.html">Welcome!</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Organizing your repositories</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#what-gets-a-repository">What gets a repository?</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#but-what-about-homework">…but what about homework?</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#what-goes-in-my-repository">What goes in my repository?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#repository-name">Repository name</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#directory-structure">Directory structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#file-names">File names</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#competing-code-bases">Competing code bases</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#no-junk-files">No junk files!</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="gitignore.html">Ignoring files with <code class="docutils literal notranslate"><span class="pre">.gitignore</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../readme/index.html">README, your repo’s front page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../extras/jupyter.html">Special considerations for Jupyter notebooks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../github-profile/index.html">Customizing your GitHub Profile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../github-pages/index.html">Creating and hosting web pages on GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../github-actions-dynamic-page/index.html">Auto-updating pages with GitHub Actions</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Fancy GitHub</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Organizing your repositories</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/organization/index.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section class="tex2jax_ignore mathjax_ignore" id="organizing-your-repositories">
+<h1>Organizing your repositories<a class="headerlink" href="#organizing-your-repositories" title="Permalink to this headline"></a></h1>
+<p>My golden rule of GitHub is <strong>no one wants to read your code, they want to read <em>about</em> your code</strong>, and all of my suggestions are structured around that. Potential employers especially want to pop into your repo, get an idea of what’s going on, and run right back out. No time to actually check out the code!</p>
+<section id="what-gets-a-repository">
+<h2>What gets a repository?<a class="headerlink" href="#what-gets-a-repository" title="Permalink to this headline"></a></h2>
+<p>Each repository is generally <strong>the code for a single project</strong>. A “single project” can mean pretty much anything! Some examples might be:</p>
+<ul class="simple">
+<li><p>The <a class="reference external" href="https://github.com/BuzzFeedNews/2021-09-guardianship-filings">analysis notebooks</a> behind a story or series</p></li>
+<li><p>An <a class="reference external" href="https://github.com/datadesk/nws-wwa">automatic scraper</a> and the data it downloads</p></li>
+<li><p>The code for <a class="reference external" href="https://github.com/jsoma/fuzzy_pandas">a package or library</a></p></li>
+<li><p>A unique, curated, or continually-updating <a class="reference external" href="https://github.com/cmrivers/ebola">dataset</a></p></li>
+<li><p>Your <a class="reference external" href="https://github.com/jsoma/NICAR20-intro-d3">notes for a workshop</a> that you share with attendees</p></li>
+<li><p>A <a class="reference external" href="https://github.com/vinta/awesome-python">long list of links</a> people might find interesting</p></li>
+<li><p><a class="reference external" href="https://github.com/sharkdp/config-files">Configuration files</a> that you use on new computers or want to share with others</p></li>
+</ul>
+<p>The important thing is here is to not just throw everything you’ve ever worked on into a single repository! Some more specific examples:</p>
+<p>Let’s say you wrote a GitHub Actions auto-scraper to pull headlines from the NY Times, then analyzed how they adjust headlines after a story goes out. That would be <strong>two separate repositories</strong>. The auto-scraper is unique enough that it should get its own space to live (especially since it will continue to update!).</p>
+<p>If you downloaded a list of New York City’s trees from a website and write a story about it, that’s <strong>one repo</strong>. While you probably cleaned the data a little bit, it isn’t unique enough to get its own repo! If you had a website where people could submit data on trees and you pulled it into the database over time, however, that could quality for its own repo.</p>
+<p>If you do sixteen different analyses of abandoned wells in Texas, it might be sixteen stories but I’d probably put it all of it in <strong>a single repository</strong>. That way someone who was interested in the topic wouldn’t have to jump around so much! If they were all very difference in scope or presentation, though, splitting could also make sense.</p>
+<section id="but-what-about-homework">
+<h3>…but what about homework?<a class="headerlink" href="#but-what-about-homework" title="Permalink to this headline"></a></h3>
+<p>Unless an instructor tells you otherwise, you should absolutely have your terrible, awful, I’m-still-learning-things homework up on GitHub.</p>
+<p>You’ll be embarrassed, you’ll be ashamed, you’d rather be shot into the center of the sun, but remember: <strong>no one wants to read your code, they just want to read <em>about</em> it.</strong> No employer is going to look at your homework and decide to not hire you based on what’s inside. They’ll ignore the code, see that the repo is well organized and well documented, and they’ll be <em>impressed</em>.</p>
+<p><em>In all honesty: I <strong>love</strong> to look at peoples’ homeworks on GitHub. But not to judge them! It’s only so I can learn about the classwork they’ve taken and see what kind of exercises teachers give out. I’m exceptionally nosy about how things are taught.</em></p>
+<p>It’s up to you whether you’d rather organize it as all of your homework in a single repository or separate it into multiple repos. If you choose to keep them in a single repo, be sure to pay attention to the <a class="reference external" href="#directory-structure">directory structure</a> section – you’ll probably want to organize them into one folder for each assignment.</p>
+</section>
+</section>
+<section id="what-goes-in-my-repository">
+<h2>What goes in my repository?<a class="headerlink" href="#what-goes-in-my-repository" title="Permalink to this headline"></a></h2>
+<p>It really depends on what your repository is <em>about</em>, but as a gentle suggestion I’ll say:</p>
+<ul class="simple">
+<li><p>Your code</p></li>
+<li><p>A README explaining what’s going on in the repo</p></li>
+</ul>
+<p>That’s just about it! <strong>The most important part is the README</strong>, which is the “front page” that shows up when someone visits your repo. Like I said before, no one wants to read your code, they only want to read <em>about</em> your code.</p>
+<p>If you did an incredible project and only posted a README without any code, people could still figure out what you did and reach out to you for more details. If you post your code and no README, people are going to slam that back button fast enough to bring their tiny little fingers. “What was that code all about?” they’ll wonder to themselves. No one will ever know!</p>
+<p><strong>Note for data-driven repositories:</strong> if you’re including an analysis, it’s best practice to also include the data that is being analyzed. If the data is too big for GitHub – larger than 100MB – you’ll want to provide a link to the data in the README and in your analysis code.</p>
+</section>
+<section id="repository-name">
+<h2>Repository name<a class="headerlink" href="#repository-name" title="Permalink to this headline"></a></h2>
+<p>Your repository’s name is going to be the first thing people see about it. Give it a name that makes sense.</p>
+<p>If you need to change a repo’s name, open it on GitHub and then go to <strong>Settings &gt; Options</strong>. Changing the repository’s name is right there at the top! You don’t need to do anything else on your machine after you change it, it just <em>knows</em>.</p>
+<p><img alt="How to change your repo's name" src="../_images/change-repo-name.png" /></p>
+</section>
+<section id="directory-structure">
+<h2>Directory structure<a class="headerlink" href="#directory-structure" title="Permalink to this headline"></a></h2>
+<p>If you have more than a few files – maybe a couple PDFs of documentation, a handful of CSV files, some HTML and a couple Python scripts - <em>organize them into directories</em>. Organization is so important to developers there are <a class="reference external" href="https://cookiecutter.readthedocs.io/en/1.7.2/">entire software packages built around organizing your work!</a></p>
+<p>For example, <a class="reference external" href="https://github.com/BuzzFeedNews/2020-06-leso-1033-transfers-since-ferguson">this BuzzFeed News repository about federal equipment transfers to law enforcement</a> has <code class="docutils literal notranslate"><span class="pre">data</span></code>, <code class="docutils literal notranslate"><span class="pre">notebooks</span></code> and <code class="docutils literal notranslate"><span class="pre">outputs</span></code> folders.</p>
+</section>
+<section id="file-names">
+<h2>File names<a class="headerlink" href="#file-names" title="Permalink to this headline"></a></h2>
+<p>Names should be <strong>brief, clean, and descriptive.</strong> It’s not a good look if your files are named something like <code class="docutils literal notranslate"><span class="pre">analysis_FINAL_v2_(1).ipynb</span></code>! Rename it <code class="docutils literal notranslate"><span class="pre">Firearms</span> <span class="pre">Analysis.ipynb</span></code> and you’ll be in a better place.</p>
+<p>Also, be sure to <strong>use the filename standards for the ecosystem you’re working in</strong>. For example, the reason why <code class="docutils literal notranslate"><span class="pre">Firearms</span> <span class="pre">Analysis.ipynb</span></code> has spaces and capital letters is because they’re both accepted in Jupyter notebook filenames. If it was instead a plain Python file, <code class="docutils literal notranslate"><span class="pre">firearms_analysis.py</span></code> would be a better renaming candidate.</p>
+</section>
+<section id="competing-code-bases">
+<h2>Competing code bases<a class="headerlink" href="#competing-code-bases" title="Permalink to this headline"></a></h2>
+<p>Early in your development career, you’ll often end up creating two directories:</p>
+<ol class="arabic simple">
+<li><p>The place where you actually write your code</p></li>
+<li><p>A separate directory for the repository, where you copy the clean, finished code</p></li>
+</ol>
+<p><strong>Please stop doing that!</strong> You’re making your life more difficult than it should be. Trying to manage multiple copies of the same code never ends up well.</p>
+<p>By having one true “source of knowledge” – keeping the “real” code in the repo – you’ll never have your GitHub repo out of sync with the best, most recent version of your code. You’ll never accidentally delete your updates by trashing the “wrong” directory, or lose months of work from a computer crash by forgetting to update the “finished” version.</p>
+<p><strong>Just make the original folder the actual repository, problem solved.</strong></p>
+<p><em><strong>But what about my <code class="docutils literal notranslate"><span class="pre">firearms_analysis_FINALfinal_v2_(1).ipynb</span></code>?</strong> You don’t need multiple versions of the file, that’s what git is for! If you erase something you end up needing later, all you have to do is ask git to go back in time and you can find your old code.</em></p>
+</section>
+<section id="no-junk-files">
+<h2>No junk files!<a class="headerlink" href="#no-junk-files" title="Permalink to this headline"></a></h2>
+<p>Sometimes your computer creates files you <strong>don’t want included in your repo.</strong> Temporary files, system files, all sorts of things that only act as clutter on the GitHub interface.</p>
+<p>Sometimes you create files you don’t want shared, either! Scratch files where you’re taking notes, files with secret variables in them, all sorts of things.</p>
+<p>Our next section addresses the solution: <code class="docutils literal notranslate"><span class="pre">.gitignore</span></code></p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../welcome/index.html" class="btn btn-neutral float-left" title="Welcome!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="gitignore.html" class="btn btn-neutral float-right" title="Ignoring files with .gitignore" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, Jonathan Soma.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-5541738-17"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-5541738-17', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>

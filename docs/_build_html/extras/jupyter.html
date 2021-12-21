@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Special considerations for Jupyter notebooks &mdash; Fancy GitHub  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Customizing your GitHub Profile" href="../github-profile/index.html" />
+    <link rel="prev" title="README, your repo’s front page" href="../readme/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> Fancy GitHub
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../welcome/index.html">Welcome!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../organization/index.html">Organizing your repositories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../organization/gitignore.html">Ignoring files with <code class="docutils literal notranslate"><span class="pre">.gitignore</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../readme/index.html">README, your repo’s front page</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Special considerations for Jupyter notebooks</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#above-all-else-publish">Above all else: publish!</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#no-errors">No errors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#no-long-long-outputs">No long long outputs</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#too-many-print-statements">Too many <code class="docutils literal notranslate"><span class="pre">print</span></code> statements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#extra-long-dataframes">Extra-long dataframes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#notebooks-in-the-cloud">Notebooks in the cloud</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../github-profile/index.html">Customizing your GitHub Profile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../github-pages/index.html">Creating and hosting web pages on GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../github-actions-dynamic-page/index.html">Auto-updating pages with GitHub Actions</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Fancy GitHub</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Special considerations for Jupyter notebooks</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/extras/jupyter.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section class="tex2jax_ignore mathjax_ignore" id="special-considerations-for-jupyter-notebooks">
+<h1>Special considerations for Jupyter notebooks<a class="headerlink" href="#special-considerations-for-jupyter-notebooks" title="Permalink to this headline"></a></h1>
+<p>Hosting <a class="reference external" href="https://jupyter.org/">Jupyter Notebooks</a> in your GitHub repo allows people to follow along with your code and analysis in a friendlier, more approachable way than even a well-commented plain-text file. It does deserve some special considerations, however!</p>
+<section id="above-all-else-publish">
+<h2>Above all else: publish!<a class="headerlink" href="#above-all-else-publish" title="Permalink to this headline"></a></h2>
+<p>“I’m just going to clean the code up before posting it” are the words that are said before a notebook is never, ever uploaded. <strong>Just upload it!</strong></p>
+<p>Remember: No one wants to read your code, they only want to read <em>about</em> your code. No one’s going to look too closely, no need to be embarrassed!</p>
+</section>
+<section id="no-errors">
+<h2>No errors<a class="headerlink" href="#no-errors" title="Permalink to this headline"></a></h2>
+<p>Jupyter notebooks are convenient in that they allow a back-and-forth discussion with your data and code, with each step you learn a little bit more about your data.</p>
+<p>This sometimes means <em>missteps</em>, though, where you might do something that sends an error right back at you. Maybe you keep the broken code there for reference, or you just fix it in the next cell.</p>
+<p>Before you publish, <strong>clean up all those errors!</strong> Even though no one is reading your code closely, errors take up a lot lot lot of space and are very obvious. If it’s important that you keep the bad code, just comment it out.</p>
+<p>As an extra bonus, not having any errors allows people to <strong>run your code on their own machine.</strong> If you ask Jupyter to run all of the cells in a notebook, it’ll stop as soon as it encounters an error. Not a good user experience if you want to run from top to bottom! By getting rid of the bad code people are more easily able to reproduce what you were doing.</p>
+<p>The best practice to make sure you’re all set is to select <strong>Restart and Run All</strong> from the <strong>Kernel</strong> menu. This will clear all of the variables in your notebook and run it all from top to bottom. You’ll quickly find out if there are any errors hiding in it!</p>
+<p><img alt="Restart and Run All" src="../_images/restart-run-all.png" /></p>
+</section>
+<section id="no-long-long-outputs">
+<h2>No long long outputs<a class="headerlink" href="#no-long-long-outputs" title="Permalink to this headline"></a></h2>
+<section id="too-many-print-statements">
+<h3>Too many <code class="docutils literal notranslate"><span class="pre">print</span></code> statements<a class="headerlink" href="#too-many-print-statements" title="Permalink to this headline"></a></h3>
+<p>Maybe you’re scraping 2000 pages, and you don’t know about <a class="reference external" href="https://tqdm.github.io/">tqdm</a>, so to keep track of what’s going on you do a <code class="docutils literal notranslate"><span class="pre">print(&quot;Scraping</span> <span class="pre">another</span> <span class="pre">page&quot;)</span></code> every time you scrape a new page.</p>
+<p><img alt="Scrolling output" src="../_images/output-scroll.png" /></p>
+<p>When it’s on your computer it’s no big deal, GitHub doesn’t add a scrollbar to long output, so it’ll end up being unattractively long.</p>
+<p><img alt="Non-scrolling output" src="../_images/output-no-scroll.png" /></p>
+<p>If you don’t want to run your cell again without the <code class="docutils literal notranslate"><span class="pre">print</span></code> in it, you can clear the cell contents instead. When you have your notebook running, follow these steps:</p>
+<ol class="arabic simple">
+<li><p>Click the cell in Jupyter</p></li>
+<li><p>Select <strong>Cell</strong> from the top menu</p></li>
+<li><p><strong>Current Output &gt; Clear</strong></p></li>
+</ol>
+</section>
+<section id="extra-long-dataframes">
+<h3>Extra-long dataframes<a class="headerlink" href="#extra-long-dataframes" title="Permalink to this headline"></a></h3>
+<p>If you’re interested in seeing a lot of your data, you might use something like <code class="docutils literal notranslate"><span class="pre">pd.set_option(&quot;display.max_rows&quot;,</span> <span class="pre">None)</span></code> or <code class="docutils literal notranslate"><span class="pre">pd.set_option(&quot;display.min_rows&quot;,</span> <span class="pre">500)</span></code> to view a lot of it at a time. It looks fine on your own machine, because Jupyter automatically sets you up with a nice scroll bar.</p>
+<p><img alt="Scrolling pandas output" src="../_images/rows-scroll.png" /></p>
+<p>When you upload it onto GitHub, though, it gets displayed all at once. It’s not a great experience for someone trying to read your code!</p>
+<p><img alt="Non-scrolling pandas output" src="../_images/rows-no-scroll.png" /></p>
+<p>The easiest way to fix this is to go back into your notebook and change your options to not display so many rows. Since you already did your analysis you don’t need to see anything else, right? Otherwise, you can clear the cell contents so that nothing shows up:</p>
+<ol class="arabic simple">
+<li><p>Click the cell in Jupyter</p></li>
+<li><p>Select <strong>Cell</strong> from the top menu</p></li>
+<li><p><strong>Current Output &gt; Clear</strong></p></li>
+</ol>
+</section>
+</section>
+<section id="notebooks-in-the-cloud">
+<h2>Notebooks in the cloud<a class="headerlink" href="#notebooks-in-the-cloud" title="Permalink to this headline"></a></h2>
+<p><em>This is only if you’re really want to go the extra mile. Most of the people who do what I explain below are publishing papers on machine learning!</em></p>
+<p>An extra step in reproducibility is allowing people to run your notebooks with the click of a button. Tools like <a class="reference external" href="https://mybinder.org/">Binder</a> and <a class="reference external" href="https://colab.research.google.com/">Google Colab</a> allows visitors to your repository to load up your notebooks in the cloud, without even downloading them!</p>
+<p>There are a <em>lot</em> more words that need to be written to show you how this is done, but for now I’ll just show you an example from <a class="reference external" href="http://investigate.ai/">my online book about machine learning in journalism</a>. While I built it for Google Colab, I think it should work with Binder, too!</p>
+<p>There’s a repository of notebooks that lives over at <a class="reference external" href="https://github.com/littlecolumns/ds4j-notebooks">https://github.com/littlecolumns/ds4j-notebooks</a>.</p>
+<p><img alt="DS4J repo" src="../_images/ds4j-repo.png" /></p>
+<p>If you go to <a class="reference external" href="https://mybinder.org/">the Binder website</a> you can plug the URL in and it’ll generate a nice cloud Jupyter environment for you to play around in!</p>
+<p><img alt="DS4J on Binder" src="../_images/ds4j-binder.png" /></p>
+<p>To encourage people to give it a try, you can provide a one-click link to launch a Binder environment. For example, the <a class="reference external" href="http://investigate.ai/">Data Science for Journalism link</a> would be <a class="reference external" href="https://mybinder.org/v2/gh/littlecolumns/ds4j-notebooks/HEAD">https://mybinder.org/v2/gh/littlecolumns/ds4j-notebooks/HEAD</a>.</p>
+<p>If you want to get extra fancy, you can use <a class="reference external" href="https://mybinder.readthedocs.io/en/latest/howto/badges.html">a binder badge</a>!</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../readme/index.html" class="btn btn-neutral float-left" title="README, your repo’s front page" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../github-profile/index.html" class="btn btn-neutral float-right" title="Customizing your GitHub Profile" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, Jonathan Soma.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-5541738-17"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-5541738-17', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>

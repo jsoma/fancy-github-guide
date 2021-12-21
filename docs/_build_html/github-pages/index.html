@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Creating and hosting web pages on GitHub &mdash; Fancy GitHub  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Auto-updating pages with GitHub Actions" href="../github-actions-dynamic-page/index.html" />
+    <link rel="prev" title="Customizing your GitHub Profile" href="../github-profile/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> Fancy GitHub
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../welcome/index.html">Welcome!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../organization/index.html">Organizing your repositories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../organization/gitignore.html">Ignoring files with <code class="docutils literal notranslate"><span class="pre">.gitignore</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../readme/index.html">README, your repo’s front page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../extras/jupyter.html">Special considerations for Jupyter notebooks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../github-profile/index.html">Customizing your GitHub Profile</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Creating and hosting web pages on GitHub</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#building-our-website">Building our website</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#our-first-html-page">Our first HTML page</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#creating-a-repository">Creating a repository</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#turning-the-repo-into-a-website">Turning the repo into a website</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#making-our-website-look-nice">Making our website look nice</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#borrowing-styles-that-you-like">Borrowing styles that you like</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#choosing-your-url">Choosing your URL</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#but-also-folders">But also! Folders!</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#the-docs-folder-trick">The <code class="docutils literal notranslate"><span class="pre">docs</span></code> folder trick</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../github-actions-dynamic-page/index.html">Auto-updating pages with GitHub Actions</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Fancy GitHub</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Creating and hosting web pages on GitHub</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/github-pages/index.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section class="tex2jax_ignore mathjax_ignore" id="creating-and-hosting-web-pages-on-github">
+<h1>Creating and hosting web pages on GitHub<a class="headerlink" href="#creating-and-hosting-web-pages-on-github" title="Permalink to this headline"></a></h1>
+<p>If you want to host a website for free, GitHub’s Pages feature is a pretty easy way to do it! You create a repository, click a couple buttons, and tada! You have a website.</p>
+<section id="building-our-website">
+<h2>Building our website<a class="headerlink" href="#building-our-website" title="Permalink to this headline"></a></h2>
+<section id="our-first-html-page">
+<h3>Our first HTML page<a class="headerlink" href="#our-first-html-page" title="Permalink to this headline"></a></h3>
+<p>First, we need to create a web page that works on our own computer. We start off with some pretty simple code:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;!doctype html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Jonathan Soma&#39;s Incredible Website<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Welcome to my website!<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>After we save it as <code class="docutils literal notranslate"><span class="pre">index.html</span></code>, it opens up nicely in our web browser.</p>
+<p><img alt="HTML and the website it creates" src="../_images/html-and-website.png" /></p>
+<p>Now we need to move it onto the internet!</p>
+</section>
+<section id="creating-a-repository">
+<h3>Creating a repository<a class="headerlink" href="#creating-a-repository" title="Permalink to this headline"></a></h3>
+<p>After a little work, my file is now living in a repo called <code class="docutils literal notranslate"><span class="pre">boring-website</span></code> (I also added a <code class="docutils literal notranslate"><span class="pre">README.md</span></code> because I’m a completionist).</p>
+<p><img alt="A picture of my website repository" src="../_images/website-repo.png" /></p>
+</section>
+<section id="turning-the-repo-into-a-website">
+<h3>Turning the repo into a website<a class="headerlink" href="#turning-the-repo-into-a-website" title="Permalink to this headline"></a></h3>
+<ol class="arabic simple">
+<li><p>Click <strong>Settings</strong> from the top menu</p></li>
+<li><p>Click <strong>Pages</strong> from the left-hand menu</p></li>
+<li><p>Select <strong>main</strong> (or <strong>master</strong>) from the dropdown, then click <strong>Save</strong></p></li>
+</ol>
+<p><img alt="Click settings" src="../_images/website-repo-settings.png" /></p>
+<p><img alt="Click pages" src="../_images/website-repo-settings-pages.png" /></p>
+<p><img alt="Set the settings" src="../_images/website-repo-settings-pages-details.png" /></p>
+<p><img alt="Saved!" src="../_images/website-repo-saved.png" /></p>
+<p>It even gives us a nice clickable link that points to exactly where our website is! <strong>But you’ll be sad if you click it,</strong> because it won’t work yet. GitHub needs to work on things for a minute.</p>
+<p><img alt="Not working yet" src="../_images/website-waiting.png" /></p>
+<p>This is actually going to be a big big problem for you when you’re working on your website.You’ll make an update, nothing will change, and you’ll ask yourself <strong>did I really fix this</strong> Did I forget to commit? Did my push not work?</p>
+<p>But usually, no, you’re fine, you’re just waiting on GitHub. Give it a couple minutes and you’ll have a delightful website.</p>
+<p><img alt="Working website" src="../_images/website-working.png" /></p>
+</section>
+</section>
+<section id="making-our-website-look-nice">
+<h2>Making our website look nice<a class="headerlink" href="#making-our-website-look-nice" title="Permalink to this headline"></a></h2>
+<p>If we want to make our website look nice, we need to learn some <strong>HTML and CSS</strong>.</p>
+<p>To learn the fundamentals, I recommend checking out my video series <a class="reference external" href="https://www.youtube.com/watch?v=WO_it0hy0hg&amp;list=PLewNEVDy7gq1vO4fTJe5fJw4u63qiKt0o">Lazy basics of HTML, CSS, and JavaScript</a> on YouTube. In about an hour it covers through the building blocks of the web.</p>
+<p>Once we know the basics of how a web page is built, we can use those skills to fix our website up! Since we aren’t fancy web designers, generally this involves using a <strong>theme</strong> or a <strong>CSS framework</strong>. Using a CSS framework to style your website is like buying clothes from a store instead of sewing them yourself: less flexibility but so, so, so much easier.</p>
+<p>At the end of the Lazy Basics series I introduce you to a CSS Framework called <strong>Bootstrap</strong>, which will help you style your website look like every other tech website on the planet. I personally enjoy an alternative to Bootstrap called <strong>Bulma</strong>, which makes things look a <em>little</em> more unique with a <em>little</em> less effort.</p>
+<p>You can find a tutorial with my buzzword-filled <a class="reference external" href="https://www.youtube.com/watch?v=iuLPLuxG2pI">Customize websites with the Bulma CSS framework: easy design tutorial with no CSS and no templates!</a>. In an hour we go from nothing to a pretty decent (and customizable!) portfolio template:</p>
+<p><img alt="Bulma example" src="../_images/bulma-example.png" /></p>
+<section id="borrowing-styles-that-you-like">
+<h3>Borrowing styles that you like<a class="headerlink" href="#borrowing-styles-that-you-like" title="Permalink to this headline"></a></h3>
+<p>Of course, you don’t have to go with a boring, blandly-designed template. Maybe you want to adapt someone else’s design?</p>
+<p>Luckily, I have a video for that, too: <a class="reference external" href="https://www.youtube.com/watch?v=ggCyrzK7qNw">Copy a website’s style by stealing CSS!</a>, where we steal <a class="reference external" href="https://larrybuch.com/">Larry’s style</a>.</p>
+</section>
+</section>
+<section id="choosing-your-url">
+<h2>Choosing your URL<a class="headerlink" href="#choosing-your-url" title="Permalink to this headline"></a></h2>
+<p>Now that we know how to build a website, let’s talk about how GitHub Pages decides where it’ll live.</p>
+<p>First, the domain: if my GitHub username is <code class="docutils literal notranslate"><span class="pre">jsoma</span></code>, all of my GitHub Pages websites will live under the domain <code class="docutils literal notranslate"><span class="pre">jsoma.github.io</span></code>. That part is easy!</p>
+<p>The rest of the URL depends on the <strong>name of the repository</strong>. Most of the time, the repository’s name just gets added on after you domain. For example, a repo named <strong>popcorn</strong> can be turned into a website at <code class="docutils literal notranslate"><span class="pre">jsoma.github.io/popcorn</span></code>.</p>
+<p>The one exception is if I want a site on <code class="docutils literal notranslate"><span class="pre">jsoma.github.io</span></code> with <em>nothing after it</em>. In that case, I make a repo called <strong>jsoma.github.io</strong>.</p>
+<p>Let’s look at some examples of what repositories might turn into:</p>
+<table class="colwidths-auto docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>username</p></th>
+<th class="head"><p>repository name</p></th>
+<th class="head"><p>website URL</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>jsoma</p></td>
+<td><p>website</p></td>
+<td><p>https://jsoma.github.io/website</p></td>
+</tr>
+<tr class="row-odd"><td><p>jsoma</p></td>
+<td><p>bubblegum-candy</p></td>
+<td><p>https://jsoma.github.io/bubblegum-candy</p></td>
+</tr>
+<tr class="row-even"><td><p>jsoma</p></td>
+<td><p>jsoma.github.io</p></td>
+<td><p>https://jsoma.github.io/</p></td>
+</tr>
+<tr class="row-odd"><td><p>jsoma</p></td>
+<td><p>mayonnaise.github.io</p></td>
+<td><p>https://jsoma.github.io/mayonnaise.github.io</p></td>
+</tr>
+</tbody>
+</table>
+<p>Notice that last one! Because the username doesn’t match the repository name, <strong>it doesn’t become <code class="docutils literal notranslate"><span class="pre">mayonnaise.github.io</span></code></strong>, the website just lives under <code class="docutils literal notranslate"><span class="pre">jsoma.github.io</span></code> as a weirdly-named directory.</p>
+<section id="but-also-folders">
+<h3>But also! Folders!<a class="headerlink" href="#but-also-folders" title="Permalink to this headline"></a></h3>
+<p>And one more thing: if I want a website at <code class="docutils literal notranslate"><span class="pre">jsoma.github.io/project-01</span></code>, I actually have <em>two options</em>.</p>
+<ol class="arabic simple">
+<li><p>Create a repo named <strong>project-01</strong></p></li>
+<li><p>Create a folder named <strong>project-01</strong> inside of my <strong>jsoma.github.io</strong> repository</p></li>
+</ol>
+<p>Both of those will live at <code class="docutils literal notranslate"><span class="pre">jsoma.github.io/project-01</span></code>.</p>
+<p>If you aren’t sure whether you should put your project into its own repo or a folder, I recommend re-reading the <a class="reference external" href="../organization/index.html#what-gets-a-repository">What gets a repository?</a> section.</p>
+</section>
+</section>
+<section id="the-docs-folder-trick">
+<h2>The <code class="docutils literal notranslate"><span class="pre">docs</span></code> folder trick<a class="headerlink" href="#the-docs-folder-trick" title="Permalink to this headline"></a></h2>
+<p>Sometimes you’ll have a project that has all sorts of prep work before you get to the display portion. You’ll be cranking through scrapers, notebooks, shapefiles, Excel and CSV files, etc etc etc, but in the end you’ll also have a website.</p>
+<p>How can you organize it all? It doesn’t seem very well-structured to throw an <code class="docutils literal notranslate"><span class="pre">index.html</span></code> right next to your <code class="docutils literal notranslate"><span class="pre">Scraping.ipynb</span></code> and <code class="docutils literal notranslate"><span class="pre">final-analysis-export.csv</span></code>, does it?</p>
+<p>Easy fix: <strong>put all of your website code in a folder called <code class="docutils literal notranslate"><span class="pre">docs</span></code>.</strong> When you tell GitHub to serve content as a website, one of the options you selected was that the files should come from “root,” the very top of your repo.</p>
+<p><img alt="Set the settings" src="../_images/website-repo-settings-pages-details.png" /></p>
+<p>If you put your web content into <code class="docutils literal notranslate"><span class="pre">docs</span></code> instead, you’ll be able to select that folder from the dropdown. That way your HTML, CSS, and everything else can live a clean life hiding far away from the data analysis pieces.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../github-profile/index.html" class="btn btn-neutral float-left" title="Customizing your GitHub Profile" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../github-actions-dynamic-page/index.html" class="btn btn-neutral float-right" title="Auto-updating pages with GitHub Actions" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, Jonathan Soma.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-5541738-17"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-5541738-17', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>

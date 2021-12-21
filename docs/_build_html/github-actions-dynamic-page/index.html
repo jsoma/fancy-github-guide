@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Auto-updating pages with GitHub Actions &mdash; Fancy GitHub  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Creating and hosting web pages on GitHub" href="../github-pages/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> Fancy GitHub
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../welcome/index.html">Welcome!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../organization/index.html">Organizing your repositories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../organization/gitignore.html">Ignoring files with <code class="docutils literal notranslate"><span class="pre">.gitignore</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../readme/index.html">README, your repo’s front page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../extras/jupyter.html">Special considerations for Jupyter notebooks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../github-profile/index.html">Customizing your GitHub Profile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../github-pages/index.html">Creating and hosting web pages on GitHub</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Auto-updating pages with GitHub Actions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#prep-work">Prep work</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#how-to-do-it">How to do it</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Fancy GitHub</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Auto-updating pages with GitHub Actions</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/github-actions-dynamic-page/index.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section class="tex2jax_ignore mathjax_ignore" id="auto-updating-pages-with-github-actions">
+<h1>Auto-updating pages with GitHub Actions<a class="headerlink" href="#auto-updating-pages-with-github-actions" title="Permalink to this headline"></a></h1>
+<section id="prep-work">
+<h2>Prep work<a class="headerlink" href="#prep-work" title="Permalink to this headline"></a></h2>
+<p>You need to know a tiny bit about two topics before heading into building auto-updating pages.</p>
+<p><strong>GitHub Pages</strong> is how you host websites on GitHub. Once you know how to create a website from a repo, it’s a pretty quick jump to <strong>automatically-updating web pages</strong>! We covered building sites earlier (I’d add a link right here, but unfortunately the software I’m using to put this site together refuses to allow it).</p>
+<p><strong>GitHub Actions</strong> is a tool built into GitHub that you can use to automatically run tasks every so often. I recommend taking a look at the now-common technique of <a class="reference external" href="https://simonwillison.net/2020/Oct/9/git-scraping/">using GitHub Actions to automatically scrape websites</a> to understand the basics.</p>
+</section>
+<section id="how-to-do-it">
+<h2>How to do it<a class="headerlink" href="#how-to-do-it" title="Permalink to this headline"></a></h2>
+<p>Y’know, I spent a long long time putting something together, but <em>it just didn’t turn out to be a good introduction</em>.</p>
+<p>But if you’d like to check it out, keep reading! It’s <a class="reference external" href="https://jsoma.github.io/auto-covid-map/">this auto-updating COVID-19 map</a>. The repo lives at <a class="reference external" href="https://github.com/jsoma/auto-covid-map">https://github.com/jsoma/auto-covid-map</a>.</p>
+<p><img alt="Auto-updating covid map" src="../_images/covid-map.png" /></p>
+<p>It all boils down to <strong>a web site that has an image on it</strong>. The image updates, and as a result the website updates.</p>
+<p>The website’s code looks something like this:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>County-level COVID in the United States<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Updated every hour from <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://github.com/nytimes/covid-19-data&quot;</span><span class="p">&gt;</span>NYT data<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;covid.svg&quot;</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">&lt;img</span> <span class="pre">src=&quot;covid.svg&quot;&gt;</span></code> is the important part.</p>
+<p>Every hour, a script is run that downloads some data from the New York Times, merges it with a shapefile from the Census Bureau, and generates a choropleth from the result. <strong>This image is saved as <code class="docutils literal notranslate"><span class="pre">covid.svg</span></code>.</strong></p>
+<p>Every time the script runs a new image is produced and committed to the repo. The commit makes GitHub Pages rebuild the site, and then the web page automatically gets updated with the new image.</p>
+<p>GitHub Actions → something changes → new commit → page updates. <strong>It’s just that easy!</strong></p>
+<p>If you’re curious about the map-creating script itself, it’s located in <a class="reference external" href="https://github.com/jsoma/auto-covid-map/blob/main/.github/workflows/update_map.yml"><code class="docutils literal notranslate"><span class="pre">/.github/workflows/update_map.yml</span></code></a>. If you cut out all of the setup pieces the important pieces are:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>wget -N  <span class="s2">&quot;https://raw.githubusercontent.com/nytimes/covid-19-data/master/rolling-averages/us-counties-recent.csv&quot;</span>
+mapshaper cb_2020_us_county_500k.shp <span class="se">\</span>
+    -each <span class="s1">&#39;JOIN_FIPS=&quot;USA-&quot; + GEOID&#39;</span> <span class="se">\</span>
+    -join us-counties-recent.csv <span class="nv">keys</span><span class="o">=</span>JOIN_FIPS,geoid <span class="se">\</span>
+    -classify <span class="nv">field</span><span class="o">=</span>cases_avg_per_100k save-as<span class="o">=</span>fill color-scheme<span class="o">=</span>Magma invert <span class="se">\</span>
+        <span class="nv">breaks</span><span class="o">=</span><span class="m">10</span>,30,50,70,100,250 <span class="se">\</span>
+    -proj albersusa <span class="se">\</span>
+    -simplify <span class="m">2</span>% <span class="se">\</span>
+    -o covid.svg
+</pre></div>
+</div>
+<p>All in all, any website that pulls a static file - whether it’s a CSV, JSON, an image, whatever – can be automatically updated using this method! Just have GitHub Actions update that file and your site will be fresh and new with each change.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../github-pages/index.html" class="btn btn-neutral float-left" title="Creating and hosting web pages on GitHub" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, Jonathan Soma.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-5541738-17"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-5541738-17', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>
